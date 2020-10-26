@@ -4,8 +4,6 @@ describe('4. Product search and product description display', () => {
     beforeEach(() => {
         // Preserves lang cookie for multiple tests, because otherwise Cypress by default automatically clears all cookies before each new test start
         Cypress.Cookies.preserveOnce('lang', '1595dc26-9ecc-4c7d-b26e-badffc19c6b5')
-        // Sets vieport to 720p
-        cy.viewport(1280, 720)
     })
 
     // Precondition
