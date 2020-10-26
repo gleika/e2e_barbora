@@ -1,9 +1,9 @@
 // Test case
 describe('4. Product search and product description display', () => {
     
-    // Automatically preserves lang cookie for multiple tests, because otherwise Cypress by default automatically clears all cookies before each new test start.
+    // Automatically preserves lang cookie for multiple tests, because otherwise Cypress by default automatically clears all cookies before each new test start
     beforeEach(() => {
-        Cypress.Cookies.preserveOnce('lang', 'r1595dc26-9ecc-4c7d-b26e-badffc19c6b5token')
+        Cypress.Cookies.preserveOnce('lang', '1595dc26-9ecc-4c7d-b26e-badffc19c6b5')
     })
 
     // Precondition
