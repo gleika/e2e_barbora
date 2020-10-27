@@ -75,7 +75,5 @@ describe('4. Product search and product description display', () => {
         cy.get('.b-product-prices-block').should('be.visible')
         cy.get('.b-product-info--info1').should('be.visible')
         cy.get('.b-product-info--info-2').should('be.visible')
-        cy.get('.col-md-4').should('be.visible')
-        cy.get('.b-nutrients--item').should('be.visible')
     })    
 })
