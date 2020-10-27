@@ -14,6 +14,7 @@ describe('4. Product search and product description display', () => {
     // Precondition
     it('Select English language', () => {
         cy.get('.b-select-lang--input').select('1595dc26-9ecc-4c7d-b26e-badffc19c6b5')
+        cy.get('.b-select-lang--input').should('have.value', '1595dc26-9ecc-4c7d-b26e-badffc19c6b5')
         cy.wait(250)
     })
 
@@ -35,6 +36,7 @@ describe('4. Product search and product description display', () => {
 
     it('4.4. Select Sort by dropdown value: Alphabetical order (A-Z)', () => {
         cy.get('.b-orderby.form-control').select('name')
+        cy.get('.b-orderby.form-control').should('have.value', 'name')
     })
 
     // Check expected result
