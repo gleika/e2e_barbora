@@ -76,6 +76,8 @@ describe('4. Product search and product description display', () => {
         cy.get('.b-product-info--pictures-wrap').should('be.visible')
         cy.get('.b-product-info--title').should('be.visible')
         cy.get('.b-product-prices-block').should('be.visible')
+        cy.get('.b-quantity-select--input').should('be.visible')
+        cy.get('.b-add-to-cart').should('be.visible')
         cy.get('.b-product-info--info1').should('be.visible')
         cy.get('.b-product-info--info-2').should('be.visible')
     })    
