@@ -6,16 +6,9 @@ describe('4. Product search and product description display', () => {
         Cypress.Cookies.preserveOnce('lang', '1595dc26-9ecc-4c7d-b26e-badffc19c6b5')
     })
 
-    // Precondition
-    it('Visit https://pagrindinis.barbora.lt/ website', () => {
-        cy.visit('https://pagrindinis.barbora.lt/')
-    })
-
-    // Precondition
-    it('Select English language', () => {
-        cy.get('.b-select-lang--input').select('1595dc26-9ecc-4c7d-b26e-badffc19c6b5')
-        cy.get('.b-select-lang--input').should('have.value', '1595dc26-9ecc-4c7d-b26e-badffc19c6b5')
-        cy.wait(250)
+    // Custom command description can be found /support/commands.js
+    it('Action preconditions', () => {
+        cy.precond()
     })
 
     // Test case actions
