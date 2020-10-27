@@ -49,7 +49,8 @@ describe('4. Product search and product description display', () => {
     })
 
     it('4.7. Select Country of origin dropdown value: Holland', () => {
-        cy.get('.b-multiselect--header').contains('Country of origin').click().get('.b-input-checkbox--label').contains('Holland').click()
+        cy.get('.b-multiselect--header').contains('Country of origin').click()
+        cy.get('.b-input-checkbox--label').contains('Holland').click()
     })
 
     it('4.8. Click Filter button', () => {
