@@ -1,3 +1,4 @@
+// Before running the test make sure the basket is empty. If not, please clear it.
 describe('5. Product adding, update and removal from basket', () => {
     beforeEach(() => {
         // Preserves lang and .BRBAUTH cookies for multiple tests, because otherwise Cypress by default automatically clears all cookies before each new test start
