@@ -24,3 +24,25 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
 import 'cypress-wait-until';
+
+Cypress.Commands.add('precond', () => {
+    cy.visit('https://pagrindinis.barbora.lt/')
+    cy.get('.b-select-lang--input').select('1595dc26-9ecc-4c7d-b26e-badffc19c6b5')
+    cy.get('.b-select-lang--input').should('have.value', '1595dc26-9ecc-4c7d-b26e-badffc19c6b5')
+    cy.wait(250)
+})
+
+Cypress.Commands.add('precondlogin', () => {
+    cy.visit('https://pagrindinis.barbora.lt/')
+    cy.get('.b-select-lang--input').select('1595dc26-9ecc-4c7d-b26e-badffc19c6b5')
+    cy.get('.b-select-lang--input').should('have.value', '1595dc26-9ecc-4c7d-b26e-badffc19c6b5')
+    cy.wait(250)
+    cy.get('.b-login-register--login').click()
+    cy.get('#b-login-email').clear()
+    cy.get('#b-login-email').type('vard.pavard@gmail.com')
+    cy.get('#b-login-password').clear()
+    cy.get('#b-login-password').type('Password987')
+    cy.get('.b-login-form--login-button').click()
+    cy.wait(500)
+    cy.get('.modal-content').find('.close').click()
+})
